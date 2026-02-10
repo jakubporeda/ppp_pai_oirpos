@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Styl dla pola hasła */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.input-error {
+  color: red;
+  font-size: 12px;
+}
+
+/* Kontener komunikatu */
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* Wyśrodkowanie */
+  background-color: #2e2e2e;  /* Tło komunikatu */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;  /* Ustala, że komunikat jest na wierzchu */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);  /* Dodanie cienia dla lepszego efektu */
+  display: none;  /* Domyślnie komunikat jest ukryty */
+  font-size: 16px;
+  font-weight: 600;
+  min-width: 200px;  /* Minimalna szerokość */
+  text-align: center;
+}
+
+/* Kiedy pojawi się komunikat (po kliknięciu przycisku lub po akcji) */
+.notification.show {
+  display: block;
+}
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .print\\:hidden {
+    display: none !important;
+  }
+}
